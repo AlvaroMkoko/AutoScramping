@@ -1,0 +1,54 @@
+[
+  {
+    "titulo": "Junior AI Engineer - RAG & LLMs",
+    "empresa": "Startup IA Ejemplo",
+    "decision": "match_fuerte",
+    "score_final": 89.6,
+    "score_semantico_perfil": 78.8,
+    "score_semantico_historico": 88.3,
+    "score_reglas": 100.0,
+    "razones": [
+      "Stack detectado: python, docker, git, langchain, rag"
+    ]
+  },
+  {
+    "titulo": "Frontend Developer React Senior",
+    "empresa": "Agencia Web Ejemplo",
+    "decision": "descartar",
+    "score_final": 0.0,
+    "score_semantico_perfil": 0.0,
+    "score_semantico_historico": 0.0,
+    "score_reglas": 0.0,
+    "razones": [
+      "Requiere 5+ años de experiencia formal",
+      "Requiere inglés C1 fluido",
+      "Stack 100% frontend, sin componente de IA/backend"
+    ]
+  },
+  {
+    "titulo": "Auxiliar Administrativo",
+    "empresa": "Empresa Ejemplo",
+    "decision": "descartar",
+    "score_final": 0.0,
+    "score_semantico_perfil": 0.0,
+    "score_semantico_historico": 0.0,
+    "score_reglas": 0.0,
+    "razones": [
+      "Salario 12000 < 15,000 MXN"
+    ]
+  },
+  {
+    "titulo": "AI/ML Engineer - MLOps",
+    "empresa": "Scaleup Ejemplo",
+    "decision": "revisar",
+    "score_final": 71.1,
+    "score_semantico_perfil": 75.5,
+    "score_semantico_historico": 82.8,
+    "score_reglas": 60.0,
+    "razones": [
+      "Requiere inglés B2 — evaluar si el puesto lo vale",
+      "Requiere 2+ años — evaluar equivalencia académica",
+      "Stack detectado: python, mlflow, fastapi, docker"
+    ]
+  }
+]

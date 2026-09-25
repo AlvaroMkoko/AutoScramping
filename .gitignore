@@ -1,0 +1,41 @@
+# === Secretos y credenciales (NUNCA subir) ===
+data/secrets.json
+
+# === Datos personales / historial de búsqueda ===
+# Contienen tu nombre, teléfono, correo, y resultados de tus búsquedas reales.
+# Solo se suben las versiones *.example.json como plantilla.
+data/perfil_profesional.json
+data/job_analysis_report.json
+data/vacantes_vistas.json
+reportes/
+cv_generados/
+
+# === Artefactos de Python ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+env/
+
+# === Artefactos de LaTeX/XeLaTeX ===
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.xdv
+
+# === Logs de ejecución (Task Scheduler) ===
+logs/*.txt
+!logs/README.txt
+
+# === Sistema operativo / editor ===
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

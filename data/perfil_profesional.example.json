@@ -1,0 +1,214 @@
+{
+  "meta": {
+    "tipo": "perfil_profesional_candidato",
+    "candidato": "Juan Pérez Ejemplo",
+    "fecha_generacion": "2026-01-01",
+    "version": "1.0",
+    "descripcion": "Plantilla de ejemplo. Copia este archivo a perfil_profesional.json y reemplaza los datos con los tuyos.",
+    "fuente": "Archivo de ejemplo"
+  },
+
+  "identidad": {
+    "nombre_completo": "Juan Pérez Ejemplo",
+    "contacto": {
+      "telefono": "(55) 0000-0000",
+      "email": "juan.perez.ejemplo@example.com",
+      "github": "https://github.com/tu-usuario",
+      "linkedin": null
+    },
+    "ubicacion": {
+      "ciudad": "Ciudad de México",
+      "pais": "México",
+      "disponibilidad_traslado": false,
+      "modalidades_aceptadas": ["presencial", "hibrido", "remoto"]
+    }
+  },
+
+  "formacion_academica": [
+    {
+      "institucion": "Universidad de Ejemplo",
+      "dependencia": "Facultad de Ejemplo",
+      "carrera": "Ingeniería en Inteligencia Artificial",
+      "nivel": "Licenciatura / Ingeniería",
+      "estado": "En curso",
+      "semestre_actual": 8,
+      "semestres_totales": 9,
+      "periodo": "2023 - 2026 (estimado)",
+      "titulo_disponible": false,
+      "cedula_disponible": false,
+      "nota": "Ejemplo de institución en curso."
+    }
+  ],
+
+  "idiomas": {
+    "español": {
+      "nivel": "nativo",
+      "codigo_CEFR": "C2"
+    },
+    "inglés": {
+      "nivel": "intermedio",
+      "codigo_CEFR": "B1-B2",
+      "desglose": {
+        "lectura_tecnica": "fluida",
+        "escritura_tecnica": "funcional",
+        "conversacion": "en desarrollo",
+        "presentaciones": "basico"
+      },
+      "nota": "Gap de ejemplo: inglés conversacional en mejora activa."
+    }
+  },
+
+  "certificaciones": [
+    {
+      "nombre": "Certificación de Ejemplo",
+      "emisor": "Emisor de Ejemplo",
+      "fecha": "2024-01",
+      "vigente": true,
+      "relevancia": ["ejemplo", "certificacion"]
+    }
+  ],
+
+  "logros_competitivos": [
+    {
+      "nombre": "1er Lugar - Hackathon de Ejemplo",
+      "organizador": "Organizador de Ejemplo",
+      "fecha": "2025",
+      "descripcion": "Descripción de ejemplo de un logro competitivo.",
+      "relevancia_cv": "muy alta"
+    }
+  ],
+
+  "stack_tecnico": {
+    "lenguajes_de_programacion": [
+      {
+        "nombre": "Python",
+        "nivel": "avanzado",
+        "años_uso": 2,
+        "contexto": "Lenguaje principal de ejemplo.",
+        "confianza": 0.9
+      },
+      {
+        "nombre": "JavaScript",
+        "nivel": "intermedio",
+        "años_uso": 1,
+        "contexto": "Frontend de ejemplo.",
+        "confianza": 0.6
+      }
+    ],
+    "ml_y_deep_learning": [
+      {
+        "nombre": "PyTorch",
+        "nivel": "intermedio",
+        "habilidades_especificas": [
+          "Training loop desde cero",
+          "Autograd y diferenciación automática"
+        ],
+        "confianza": 0.72
+      },
+      {
+        "nombre": "scikit-learn",
+        "nivel": "avanzado",
+        "habilidades_especificas": [
+          "Random Forest, K-NN, SVM",
+          "Cross-validation"
+        ],
+        "confianza": 0.85,
+        "diferenciador": true,
+        "nota": "Ejemplo de diferenciador."
+      }
+    ],
+    "mlops_y_produccion": [
+      {
+        "nombre": "Docker",
+        "nivel": "básico-intermedio",
+        "habilidades_especificas": ["Dockerfile", "docker build/run"],
+        "confianza": 0.65
+      }
+    ],
+    "llms_y_genai": [
+      {
+        "nombre": "Prompt Engineering",
+        "nivel": "básico-intermedio",
+        "confianza": 0.6
+      }
+    ],
+    "en_adopcion_activa": [
+      "RAG (Retrieval Augmented Generation)",
+      "LangChain",
+      "AWS (Lambda, API Gateway)"
+    ]
+  },
+
+  "proyectos": [
+    {
+      "id": "P1",
+      "nombre": "Proyecto de Ejemplo 1",
+      "tipo": "Proyecto personal",
+      "estado": "Completado",
+      "stack": ["Python", "PyTorch"],
+      "descripcion": "Descripción de ejemplo del proyecto.",
+      "peso_portfolio": "alto"
+    }
+  ],
+
+  "competencias_blandas": {
+    "fortalezas_identificadas": [
+      {
+        "competencia": "Aprendizaje autónomo",
+        "evidencia": "Ejemplo de evidencia de la competencia.",
+        "nivel": "alto"
+      }
+    ],
+    "areas_de_desarrollo": [
+      "Inglés conversacional fluido",
+      "Experiencia en entornos laborales formales"
+    ]
+  },
+
+  "personalidad_tecnica": {
+    "estilo_de_trabajo": "Descripción de ejemplo del estilo de trabajo.",
+    "motivadores": ["Motivador de ejemplo 1", "Motivador de ejemplo 2"],
+    "perfil_de_carrera_natural": "ML Engineer con enfoque en evaluación",
+    "no_motivadores": ["No motivador de ejemplo"]
+  },
+
+  "objetivo_profesional": {
+    "tipo_puesto_buscado": "ML Engineer / AI Engineer",
+    "nivel": "Junior / Entry-level",
+    "descripcion": "Descripción de ejemplo del objetivo profesional.",
+    "salario_objetivo_mensual_MXN": 20000,
+    "salario_minimo_aceptable_MXN": 15000,
+    "preferencia_modalidad": ["híbrido", "remoto", "presencial"],
+    "ubicacion_preferida": "CDMX y zona metropolitana",
+    "disposicion_viaje": "ocasionalmente"
+  },
+
+  "instrucciones_para_agente": {
+    "uso_primario": "Evaluación de vacantes + generación automática de CVs en LaTeX",
+
+    "al_generar_cv": {
+      "plantilla": "cv_template.tex.jinja",
+      "campos_a_personalizar": {
+        "title_line": "Título del puesto específico + institución",
+        "summary": "4-5 líneas de resumen adaptado al puesto",
+        "skills_table": "Reordenar por relevancia al puesto",
+        "projects_tex": "Priorizar proyectos según categoría del puesto",
+        "logros_tex": "Reordenar por relevancia",
+        "idiomas_line": "Adaptar nivel de inglés según requisito del puesto"
+      },
+      "proyectos_a_incluir_por_categoria": {
+        "GenAI_LLM": ["P1"],
+        "ML_Engineering": ["P1"]
+      },
+      "diferenciadores_a_mencionar_siempre": [
+        "Diferenciador de ejemplo 1",
+        "Diferenciador de ejemplo 2"
+      ],
+      "gaps_a_mencionar_honestamente": {
+        "LLMs_RAG": "en adopción activa",
+        "inglés_avanzado": "Intermedio B1-B2 (en mejora activa)"
+      },
+      "formato_output": ".tex + .pdf compilado con xelatex"
+    }
+  }
+}

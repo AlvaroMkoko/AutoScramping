@@ -1,0 +1,141 @@
+%!TEX program = xelatex
+% ─────────────────────────────────────────────────────────────────────────────
+%  CV — Álvaro Alexander Velázquez Matus (plantilla generada dinámicamente)
+%  Compilar: xelatex cv_generado.tex
+% ─────────────────────────────────────────────────────────────────────────────
+\documentclass[10pt, a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage[
+  top=0.9cm, bottom=0.8cm,
+  left=1.4cm, right=1.4cm
+]{geometry}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{ragged2e}
+\usepackage{amssymb}
+\usepackage{parskip}
+\usepackage{xcolor}
+
+\setmainfont{TeX Gyre Termes}
+
+\definecolor{linkblue}{HTML}{1155CC}
+\definecolor{gray}{HTML}{555555}
+\definecolor{lightgray}{HTML}{888888}
+\definecolor{rule}{HTML}{222222}
+
+\hypersetup{colorlinks = true, urlcolor = linkblue, hidelinks = false}
+\pagestyle{empty}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+
+\titleformat{\section}
+  {\centering\normalsize\bfseries}
+  {}{0em}{}
+  [\vspace{1pt}\color{rule}\hrule\vspace{4pt}]
+\titlespacing{\section}{0pt}{7pt}{4pt}
+
+\newlist{cvlist}{itemize}{1}
+\setlist[cvlist]{
+  label        = \textcolor{gray}{$\blacktriangleright$},
+  leftmargin   = 1.4em,
+  itemsep      = 2pt,
+  topsep       = 3pt,
+  parsep       = 0pt,
+  partopsep    = 0pt
+}
+
+\newcommand{\cvlink}[2]{\href{#1}{\color{linkblue}\underline{#2}}}
+\newcommand{\ph}[2]{%
+  \vspace{6pt}%
+  {\bfseries #1}%
+  \ifx&#2&\else{\color{gray}\itshape\ —\ #2}\fi%
+  \par\vspace{2pt}%
+}
+
+\begin{document}
+
+% ── NOMBRE ────────────────────────────────────────────────────────────────
+\begin{center}
+  {\color{rule}\hrule height 0.6pt}
+  \vspace{6pt}
+  {\Large\bfseries \VAR{nombre}}
+  \vspace{6pt}\\
+  {\small\itshape\color{gray} \VAR{title_line} }
+  \vspace{6pt}
+  {\color{rule}\hrule height 0.6pt}
+\end{center}
+
+\vspace{4pt}
+
+% ── RESUMEN (personalizado por vacante) ────────────────────────────────────
+\begin{center}
+\begin{minipage}{0.97\linewidth}
+\centering\small
+\VAR{summary}
+\end{minipage}
+\end{center}
+
+\vspace{2pt}
+
+% ── CONTACTO ────────────────────────────────────────────────────────────────
+\section{CONTACTO}
+\begin{center}\small
+  \VAR{telefono}
+  $\cdot$
+  \cvlink{mailto:\VAR{email}}{\VAR{email}}
+  $\cdot$
+  \cvlink{https://\VAR{github}}{\VAR{github}}
+\end{center}
+
+% ── HABILIDADES TÉCNICAS (personalizado por vacante) ────────────────────────
+\section{HABILIDADES TÉCNICAS}
+\begin{tabularx}{\linewidth}{@{} >{\bfseries\small}p{3.0cm} @{\hspace{6pt}} >{\small}X @{}}
+\BLOCK{for fila in skills_rows}
+  \VAR{fila.label} & \VAR{fila.valores} \\[3pt]
+\BLOCK{endfor}
+\end{tabularx}
+
+% ── PROYECTOS (subconjunto y orden personalizados por vacante) ──────────────
+\section{PROYECTOS DESTACADOS}
+\BLOCK{for p in proyectos}
+\ph{\VAR{loop.index}.\ \VAR{p.titulo}}{\VAR{p.tech_line}}
+\begin{cvlist}
+\BLOCK{for bullet in p.bullets}
+  \item \VAR{bullet}
+\BLOCK{endfor}
+\end{cvlist}
+\BLOCK{endfor}
+
+% ── LOGROS (orden personalizado por vacante) ────────────────────────────────
+\section{LOGROS COMPETITIVOS}
+\begin{cvlist}
+\BLOCK{for logro in logros}
+  \item \VAR{logro}
+\BLOCK{endfor}
+\end{cvlist}
+
+% ── EDUCACIÓN (fijo) ─────────────────────────────────────────────────────────
+\section{EDUCACIÓN Y FORMACIÓN}
+\begin{tabularx}{\linewidth}{@{} X r @{}}
+\BLOCK{for institucion, periodo, detalle in educacion}
+  \VAR{institucion}  & \VAR{periodo} \\
+  \bfseries \VAR{detalle} \normalfont & \\[4pt]
+\BLOCK{endfor}
+\end{tabularx}
+
+% ── CERTIFICACIONES E IDIOMAS (fijo) ─────────────────────────────────────────
+\section{CERTIFICACIONES $\cdot$ IDIOMAS}
+\begin{center}\small
+  \VAR{certificaciones}
+  \\[3pt]
+  \textbf{Idiomas:} \VAR{idiomas}
+\end{center}
+
+\end{document}

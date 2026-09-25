@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "tipo": "job_analysis_report",
+    "descripcion": "Plantilla de ejemplo. Copia este archivo a job_analysis_report.json y reemplaza con tu propio historial de vacantes evaluadas.",
+    "fecha_generacion": "2026-01-01"
+  },
+
+  "perfil_candidato": {
+    "resumen": "Ejemplo de resumen del candidato usado antes de existir perfil_profesional.json."
+  },
+
+  "catalogo_puestos": [
+    {
+      "id": 1,
+      "titulo": "Ingeniero Junior de Machine Learning",
+      "empresa": "Empresa de Ejemplo",
+      "categoria": "ML Engineering",
+      "modalidad": "Híbrido",
+      "ubicacion": "CDMX",
+      "salario_mensual_max": null,
+      "idioma_requerido": "Español",
+      "experiencia_requerida_años": "0-1",
+      "titulo_requerido": false,
+      "stack_requerido": ["Python", "scikit-learn", "Docker", "Git"],
+      "stack_deseable": ["MLflow", "FastAPI"],
+      "fit_score": 8,
+      "fit_razon": "Ejemplo de razón de fit: el stack requerido coincide con las habilidades confirmadas del candidato.",
+      "cv_generado": "CV_1_Empresa_Ejemplo"
+    },
+    {
+      "id": 2,
+      "titulo": "GenAI Engineer",
+      "empresa": "Otra Empresa de Ejemplo",
+      "categoria": "GenAI / LLM",
+      "modalidad": "Remoto",
+      "ubicacion": "CDMX",
+      "salario_mensual_max": null,
+      "idioma_requerido": "Español",
+      "experiencia_requerida_años": "1-2",
+      "titulo_requerido": false,
+      "stack_requerido": ["Python", "LLMs", "RAG", "APIs REST"],
+      "stack_deseable": ["LangChain", "ChromaDB"],
+      "fit_score": 9,
+      "fit_razon": "Ejemplo de razón de fit alto para un rol de GenAI.",
+      "cv_generado": "CV_2_Otra_Empresa_Ejemplo"
+    }
+  ],
+
+  "analisis_agregado": {
+    "nota": "Sección de ejemplo; no es consumida por el código del pipeline."
+  },
+
+  "patrones_identificados": {
+    "nota": "Sección de ejemplo; no es consumida por el código del pipeline."
+  },
+
+  "estrategia_de_aplicacion": {
+    "nota": "Sección de ejemplo; no es consumida por el código del pipeline."
+  },
+
+  "instrucciones_para_agente": {
+    "nota": "Sección de ejemplo; no es consumida por el código del pipeline."
+  }
+}
